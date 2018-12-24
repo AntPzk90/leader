@@ -47,12 +47,12 @@
   });
   $("#about").on("click",function(e){
   	e.preventDefault();
-  	var plansOffset = $(".about-us").offset().top;
+  	var plansOffset = $(".about-us").offset().top - (headHeight+10);
   	$("html, body").animate({scrollTop:plansOffset},300);
   });
   $("#map").on("click",function(e){
   	e.preventDefault();
-  	var plansOffset = $(".map").offset().top;
+  	var plansOffset = $(".map").offset().top - (headHeight);
   	$("html, body").animate({scrollTop:plansOffset},300);
   });
   $(".up").on("click",function(e){
