@@ -124,6 +124,8 @@ p{
     margin-bottom: 25px;
     line-height: 1.3em;
     color: #fff;
+    text-shadow: 2px 1px 3px #000;
+    font-weight: bold;
 }
 .blue{
     color: #483D8B;
@@ -510,13 +512,17 @@ td{
     opacity: 0;
     z-index: 10;
 }
-.foto-container:hover .no-color-foto{
+.foto-container:hover .no-color-foto,
+.foto-container:active .no-color-foto,
+.foto-container:focus .no-color-foto{
     opacity: 1;
     -webkit-transition:all ease-in .3s;
     -o-transition:all ease-in .3s;
     transition:all ease-in .3s;
 }
-.foto-container:hover .tranier-link{
+.foto-container:hover .tranier-link,
+.foto-container:active .tranier-link,
+.foto-container:focus .tranier-link{
     display: inline-block;
 }
 .tranier-link{
@@ -733,6 +739,10 @@ td{
 }
 
 @media all and (max-width:719.8px){
+    .h2,
+    .h3{
+        text-align: center;
+    }
     .moby-btn{
         display: block;
         height: 40px;
@@ -776,6 +786,9 @@ td{
         padding: 10px 0;
         border-bottom: 1px solid #fff;
     }
+    .navigation__list-a{
+        width: 100%;
+    }
     .navigation__list-a:hover{
         border-bottom: none;
         opacity: 0.7;
@@ -813,15 +826,17 @@ td{
         content: "";
         width: 51px;
         height: 51px;
-        left: 0px;
-        top: -5px;
+        top: 48px;
+        left: 50%;
+        margin-left: -25.5px;
     } 
     .pro__vector .vector__title::before{
         content: "";
         width: 51px;
         height: 51px;
-        left: 0px;
-        top: -5px;
+        top: 48px;
+        left: 50%;
+        margin-left: -25.5px;
 
     } 
     .vector__title::after{
@@ -829,15 +844,17 @@ td{
         width: 51px;
         height: 51px;
         z-index: 5;
-        top: -5px;
-        left: 0px;
+        top: 48px;
+        left: 50%;
+        margin-left: -25.5px;
     }
     .pro__vector .vector__title::after{
         content: "";
         width: 51px;
         height: 51px;
-        top: -5px;
-        left: 0px;
+        top: 48px;
+        left: 50%;
+        margin-left: -25.5px;
     }
     .vector{
         margin-bottom: 40px;
@@ -870,6 +887,9 @@ td{
     .before-after__table{
         width: 100%;
     }
+    .info-priductivity-wrapper{
+        width: 100%;
+    }
     .traniers-wrapper{
 
     }
@@ -885,9 +905,12 @@ td{
     }
     .video-content,
     .foto-content{
-        width: 320px;
-        height: 220px;
+        width: 100%;
+        height: 270px;
         margin-bottom: 40px;
+    }
+    .foto-list-item img{
+        object-fit: cover;
     }
     .prev,
     .next{
@@ -899,22 +922,72 @@ td{
         border: 2px solid  #0d0c11;
         cursor:pointer;
         outline: none;
+        font-size: 0;
     }
     .prev{
         background-color: #DC143C;
-        left: 20px;
+        left: 5px;
         z-index: 1;
     }
     .next{
         background-color: #483D8B;
-        right: 20px;
+        right: 5px;
         z-index: 1;
     }
-    .prev:active{
-        border: 3px solid  #000;
+    .prev:before{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: #000;
+        position: absolute;
+        bottom:13px;
+        left: 8px;
+        transform: rotate(45deg);
+        z-index: 99;
     }
-    .next:active{
-        border: 3px solid  #000;
+    .prev:after{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: #000;
+        position: absolute;
+        top: 13px;
+        left: 8px;
+        transform: rotate(-45deg);
+        z-index: 99;
+    }
+    .next:before{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: #000;
+        position: absolute;
+        bottom:13px;
+        right: 8px;
+        transform: rotate(-45deg);
+        z-index: 99;
+    }
+    .next:after{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: #000;
+        position: absolute;
+        top: 13px;
+        right: 8px;
+        transform: rotate(45deg);
+        z-index: 99;
+    }
+    .prev:active,
+    .prev:focus,
+    .next:active,
+    .next:focus{
+        opacity: 0.8;
+        border:2px solid #000;
     }
     .about-us .container{
         text-align: center;
@@ -950,7 +1023,7 @@ td{
         height: 40px;
         width: 40px;
         background-color: #DC143C;
-        border-radius: 50%;
+        border-radius: 5px;
         position: fixed;
         bottom: 10px;
         right: 10px;
