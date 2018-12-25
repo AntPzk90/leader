@@ -58,11 +58,7 @@
   	var plansOffset = $(".map").offset().top;
   	$("html, body").animate({scrollTop:plansOffset},300);
   });
-  $(".up").on("click",function(e){
-    $(".navigation__list").addClass("dn");
-  	e.preventDefault();
-  	$("html, body").animate({scrollTop:0},300);
-  })
+
   /*=== открытие мобильного меню ===*/
   $(".navigation__list").addClass("dn");
 
@@ -84,4 +80,12 @@
   if(mobyBtn.hasClass("x")){
     $(".navigation__list").addClass("dn");
   }
+
+  $(".up").on("click",function(e){
+    $(".navigation__list").addClass("dn");
+    mobyBtn.removeClass("x");
+    $(".decor").css("display","block");
+    e.preventDefault();
+    $("html, body").animate({scrollTop:0},300);
+  })
 })();
