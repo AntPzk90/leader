@@ -49,8 +49,8 @@ p{
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 0 40px;
-    background-color: #000;
+    padding: 5px 40px;
+    background-color: #0d0c11;
 }   
 .header__navigation{
     display: -webkit-box;
@@ -70,6 +70,16 @@ p{
     font-size: 24px;
     line-height: 24px;
     color: #fff;
+    position: relative;
+}
+.header-logo .leader{
+    font-size: 13px;
+    font-weight: 800;
+    position: absolute;
+    top: 4px;
+    left: 38px;
+    transform: rotate(-5deg);
+    letter-spacing: 2px;
 }
 .header-logo:hover,
 .header-logo:focus{
@@ -97,7 +107,7 @@ p{
     border-bottom: 3px solid #fff;
 }
 .main__functional-info{
-    height: 580px;
+    min-height: 580px;
     position: relative;
     background-image: url("../img/Boxing_Glove_513789_1280x1024.jpg");
     background-size: cover;
@@ -560,6 +570,10 @@ td{
         -ms-flex-align: center;
             align-items: center;
 }
+.video-content{
+    width: 600px;
+    height: 350px;
+}
 .foto-content{
     position: relative;
     width: 550px;
@@ -617,7 +631,7 @@ td{
     display: block;
 }
 .about-us{
-    padding-bottom: 50px;
+    padding-top: 60px;
 }
 .about-us-foto{
     border-radius: 3px;
@@ -628,6 +642,7 @@ td{
 .map
 {
     margin:0;
+    padding-top: 100px;
 }
 .footer{
 
@@ -712,4 +727,259 @@ td{
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
+}
+.moby-btn{
+    display: none;
+}
+
+@media all and (max-width:719.8px){
+    .moby-btn{
+        display: block;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    .container{
+        max-width: 719.8px;
+        padding: 0 10px;
+    }
+    .header{
+        padding:5px 0;
+        min-height: 60px;
+    }
+    .header-logo{
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+    .header-logo img{
+        height: 50px;
+        width: 50px;
+    }
+    .header__navigation{
+        flex-direction: column;
+        position: relative;
+        box-sizing: border-box;
+    } 
+    .navigation__list{
+        width: 100%;
+        padding-left: 0;
+        padding-top: 40px;
+        display: flex;
+        flex-direction:column; 
+    }
+    .navigation__list-item{
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+    }
+    .navigation__list-a:hover{
+        border-bottom: none;
+        opacity: 0.7;
+    }
+    .main__functional-info{
+        min-height: 420px;
+    }
+    .functional__content{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .functional__title{
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 2px 1px 3px #000;
+    }
+    .functional__slogan{
+        display: block;
+        margin:0 auto;
+        color: #fff;
+        font-weight: bold;
+        line-height: 30px;
+        letter-spacing: 1px;
+        max-width: 310px;
+    }
+    .main__vector .container{
+        flex-direction: column;
+    }
+    .vector__title{
+        text-align: center;
+        position: relative;
+        margin-bottom: 67px;
+    }
+    .slim__vector .vector__title::before{
+        content: "";
+        width: 51px;
+        height: 51px;
+        left: 0px;
+        top: -5px;
+    } 
+    .pro__vector .vector__title::before{
+        content: "";
+        width: 51px;
+        height: 51px;
+        left: 0px;
+        top: -5px;
+
+    } 
+    .vector__title::after{
+        content: "";
+        width: 51px;
+        height: 51px;
+        z-index: 5;
+        top: -5px;
+        left: 0px;
+    }
+    .pro__vector .vector__title::after{
+        content: "";
+        width: 51px;
+        height: 51px;
+        top: -5px;
+        left: 0px;
+    }
+    .vector{
+        margin-bottom: 40px;
+        text-align: center;
+        padding:15px;
+        padding-bottom: 30px
+    }
+    .main__how-it-work{
+
+    }
+    .how-it-work__steps{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    .how-it-work__step-item{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .catalog-btn{
+        line-height: 30px;
+        padding-right: 0px;
+    }
+    .main__before-after .container{
+        flex-direction: column;
+    }
+    .before-after__info{
+        width: 100%;
+    }
+    .before-after__table{
+        width: 100%;
+    }
+    .traniers-wrapper{
+
+    }
+    .personality-info{
+        flex-direction: column;
+    }
+    .galary-flex-wrap{
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+    }
+    .video-content,
+    .foto-content{
+        width: 320px;
+        height: 220px;
+        margin-bottom: 40px;
+    }
+    .prev,
+    .next{
+        position: absolute;
+        top: 45%;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        border: 2px solid  #0d0c11;
+        cursor:pointer;
+        outline: none;
+    }
+    .prev{
+        background-color: #DC143C;
+        left: 20px;
+        z-index: 1;
+    }
+    .next{
+        background-color: #483D8B;
+        right: 20px;
+        z-index: 1;
+    }
+    .prev:active{
+        border: 3px solid  #000;
+    }
+    .next:active{
+        border: 3px solid  #000;
+    }
+    .about-us .container{
+        text-align: center;
+    }
+    .about-us-foto{
+        float: none;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+    .footer .container{
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: 80px;
+    }
+    .footer-logo{
+        display: none;
+    }
+    .fix{
+    
+    }
+    .df{
+        display: flex;
+    }
+    .dn{
+        display: none;
+    }
+    .up{
+        display: none;
+        height: 40px;
+        width: 40px;
+        background-color: #DC143C;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        border: 2px solid #000;
+    }
+    .up:before{
+        content: "";
+        display: block;
+        height: 20px;
+        width: 5px;
+        background-color: #000;
+        position: absolute;
+        top: 9px;
+        left: 12px;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+    .up:after{
+        content: "";
+        display: block;
+        height: 20px;
+        width: 5px;
+        background-color: #000;
+        position: absolute;
+        top: 9px;
+        right: 12px;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
 }
