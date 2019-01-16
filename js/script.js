@@ -87,8 +87,12 @@
   }
 
   $(".up").on("click",function(e){
-    mobyMenuOnOffFnc();
     e.preventDefault();
+    if(mobyBtn.hasClass("x")){
+      $(".navigation__list").addClass("dn");
+      mobyBtn.removeClass("x");
+      $(".decor").css("display","block");
+    }
     $("html, body").animate({scrollTop:0},300);
   })
 
